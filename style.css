@@ -1,0 +1,304 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(to right, #060606, #070707);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #f5a623;
+}
+
+/* Logo */
+.logo img {
+    max-width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+.logo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Welcome Section */
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* 设置为相对定位 */
+    overflow: hidden;   /* 防止溢出 */
+}
+
+#welcome-section video#background-video {
+    position: absolute; /* 视频在父容器中绝对定位 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 确保视频居中 */
+    min-width: 100%; /* 视频宽度至少覆盖整个屏幕 */
+    min-height: 100%; /* 视频高度至少覆盖整个屏幕 */
+    z-index: -1; /* 视频置于内容下方 */
+}
+
+.welcome-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1; /* 确保内容显示在视频上方 */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Product Gallery Styling */
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title Styling */
+section h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #000000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Individual Product Cards */
+.product-card {
+    background: linear-gradient(135deg, #fffefd, #000000);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 230px;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.product-card img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 18px;
+    color: #fffefe;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #fff9f9;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Pagination Section */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.pagination button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+.pagination button:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+}
+
+/* Style for both buttons */
+.pagination button {
+    background-color: #333; /* Dark gray background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px; /* Button size */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.pagination button:hover {
+    background-color: #555; /* Slightly lighter gray */
+    transform: scale(1.1); /* Make button slightly larger when hovered */
+}
+
+/* Disabled button style */
+.pagination button:disabled {
+    background-color: #777; /* Lighter gray for disabled button */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
+/* Disabled button hover effect (no change) */
+.pagination button:disabled:hover {
+    background-color: #777; /* Keep the same color on hover */
+    transform: none; /* No scaling effect on hover */
+}
+
+/* Adjust Sections */
+section {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* Other Styling */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Home */
+.hero-section {
+    background: #b5b4b4;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* search box style*/
+#search-box-section {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-box-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-box-section button:hover {
+    background-color: #ff6b01;
+}
+
+/* Fade-in effect */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade-out effect */
+.fade-out {
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
